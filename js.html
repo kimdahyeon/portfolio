@@ -2,6 +2,17 @@
 <html>
 <body>
 	<button id="myButton">Click me</button>
+	<INPUT type="button" value="배경색 변경"
+		onClick="document.bgColor='red';”>
+		<INPUT type=" text" id="name1"
+		onfocus="focusFunction(this.id)">
+
+	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)"
+		onblur="blurFunction(this.id)">
+
+	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)"
+		onblur="blurFunction(this.id)">
+
 	<script> 
 	//myButton 이라는 아이디값을 갖는 앨리먼트를 찾아 button에 저장
 	var button = document.getElementById('myButton');
@@ -10,6 +21,22 @@
 	//버튼 클릭시 'button clicked'라고 출력
 	document.write('button clicked!'); 
 	}); 
+	
+	
+	function dblClickFunction(x) {
+		if(document.getElementById(x).style.background == "white"){
+		   document.getElementById(x).style.background = "green";
+		}else{
+		   document.getElementById(x).style.background = "white";
+		}
+		}
+		function focusFunction(x) {
+		    document.getElementById(x).style.background = "yellow";
+		}
+		function blurFunction(x) {
+		    document.getElementById(x).style.background = "red";
+		}
+	
 	</script>
 </body>
 </html>
