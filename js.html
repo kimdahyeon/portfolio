@@ -1,43 +1,42 @@
-<page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8">
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+</head>
 <body>
-	<button id="myButton">Click me</button><br>
-	<INPUT type="button" value="¹è°æ»ö º¯°æ" onClick= "document.bgColor='red';"><br>
-	<INPUT type="text" id="name1" onfocus="focusFunction(this.id)"><br>
+   <button id="myButton">Click me</button><br/> <!-- myButtonì´ë¼ëŠ” ì•„ì´ë”” ê°’ì„ ê°–ëŠ” ë²„íŠ¼ ìƒì„± -->
+   <INPUT type = "button" value="ë°°ê²½ìƒ‰ ë³€ê²½" onClick="document.bgColor='red';"><br>
+   <INPUT type = "text" id="name1" onfocus="focusFunction(this.id)"><br>
+   <INPUT type = "text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)"><br>
+   <INPUT type = "text" id="name3" ondblclick="dblClickFunction(this.id)"><br>
+   <!-- idëŠ” í•œ ë¸Œë¼ìš°ì €ë‹¹ í•˜ë‚˜ë§Œ ì‚¬ìš©í•´ì•¼í•¨ -->
+   <!-- this.id : ì¬ì‚¬ìš©ì„±ì„ ë†’ì´ê¸° ìœ„í•´ì„œ -->
+   </form>
 
-	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)"
-		onblur="blurFunction(this.id)"><br>
+   <script type="text/javascript"> 
+   //myButtonì´ë¼ëŠ” ì•„ì´ë””ê°’ì„ ê°–ëŠ” ì—˜ë¦¬ë¨¼íŠ¸ë¥¼ ì°¾ì•„ buttonì— ì €ì¥
+   var button = document.getElementById('myButton'); 
+   //buttonì— clickì´ë²¤íŠ¸ í•¸ë“¤ëŸ¬ ì¶”ê°€
+   button.addEventListener('click', function() { 
+      //ë²„íŠ¼ í´ë¦­ì‹œ 'button clicked' ë¼ê³  ì¶œë ¥
+      document.write('button clicked!'); 
+      }); 
+   
+   function dblClickFunction(x) {
+      if(document.getElementById(x).style.background == "white"){
+         document.getElementById(x).style.background = "green";
+      }else{
+         document.getElementById(x).style.background = "white";
+      }
+      }
+      function focusFunction(x) {
+          document.getElementById(x).style.background = "yellow";
+      }
+      function blurFunction(x) {
+          document.getElementById(x).style.background = "red";
+      }
+</script>
 
-	<INPUT type="text" id="name3" onfocus="focusFunction(this.id)"
-		onblur="blurFunction(this.id)"><br>
 
-	<script> 
-	//myButton ÀÌ¶ó´Â ¾ÆÀÌµğ°ªÀ» °®´Â ¾Ù¸®¸ÕÆ®¸¦ Ã£¾Æ button¿¡ ÀúÀå
-	var button = document.getElementById('myButton');
-	//button¿¡ clickÀÌº¥Æ® ÇÚµé·¯ Ãß°¡
-	button.addEventListener('click',function() {
-	//¹öÆ° Å¬¸¯½Ã 'button clicked'¶ó°í Ãâ·Â
-	document.write('button clicked!'); 
-	}); 
-	
-	
-	function dblClickFunction(x) {
-		if(document.getElementById(x).style.background == "white"){
-		   document.getElementById(x).style.background = "green";
-		}else{
-		   document.getElementById(x).style.background = "white";
-		}
-	}
-	
-	function focusFunction(x) {
-	    document.getElementById(x).style.background = "yellow";
-	}
-	
-	function blurFunction(x) {
-		document.getElementById(x).style.background = "red";
-	}
-	
-	</script>
 </body>
 </html>
