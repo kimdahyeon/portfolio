@@ -2,10 +2,8 @@
 <html>
 <body>
 	<button id="myButton">Click me</button>
-	<INPUT type="button" value="배경색 변경"
-		onClick="document.bgColor='red';”>
-		<INPUT type=" text" id="name1"
-		onfocus="focusFunction(this.id)">
+	<INPUT type="button" value="배경색 변경" onClick= "document.bgColor"='red'>
+	<INPUT id="name1" onfocus="focusFunction(this.id)">
 
 	<INPUT type="text" id="name2" onfocus="focusFunction(this.id)"
 		onblur="blurFunction(this.id)">
@@ -29,13 +27,15 @@
 		}else{
 		   document.getElementById(x).style.background = "white";
 		}
-		}
-		function focusFunction(x) {
-		    document.getElementById(x).style.background = "yellow";
-		}
-		function blurFunction(x) {
-		    document.getElementById(x).style.background = "red";
-		}
+	}
+	
+	function focusFunction(x) {
+	    document.getElementById(x).style.background = "yellow";
+	}
+	
+	function blurFunction(x) {
+		document.getElementById(x).style.background = "red";
+	}
 	
 	</script>
 </body>
