@@ -12,6 +12,11 @@
 <h1 class="hcls">test4</h1>
 </body>
 <script>
-   $("h1").css("color, red");
+   $(document).ready(function(){
+   //$("h1").css("color, red"); //모든 h1태그의 css설정을 변경
+   $("#hid").css("color", "orange"); //id가 hid인 요소의 css설정을 변경
+   $("h1[name=hname]").css("color", "yellow"); //name이 hname인 요소의 css설정을 변경
+   $(".hcls").css("color", "green"); //class가 hcls인 요소의 css설정을 변경
+   });   
 </script>
 </html>
