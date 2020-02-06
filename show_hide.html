@@ -10,17 +10,19 @@
 		height="300" style="display: none" />
 	<script>
         $(document).ready(function () {
-            boolean btn=false;
-			if(btn==false){
+            var onoff=0;
             $("button").click(function () {
+				if(btn==0){
                 $("#cat").show("slow");
-	            btn=true;
+	            $(this).html("ÀÌ¹ÌÁö¼û±è");
+	            onoff=1;
 	            });
 			}
 			else{
 			$("button").click(function () {
                 $("#cat").hide("slow");
-                btn=false;
+                $(this).html("ÀÌ¹ÌÁö¼û±è");
+	            onoff=0;
             });
         	}
         });
