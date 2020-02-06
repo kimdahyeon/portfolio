@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<meta charset="UTF-8"
 <html>
 <head>
 <script
@@ -13,14 +14,14 @@
 			var onoff = 0;
 			$("button").click(function() {
 				
-				//$(#cat).toggle("show"); //show()¿Í hide()¸¦ ±³Â÷ÇÏ¿© ½ÇÇàÇØÁÖ´Â ÇÔ¼ö
+				//$(#cat).toggle("show"); //show()ì™€ hide()ë¥¼ êµì°¨í•˜ì—¬ ì‹¤í–‰í•´ì£¼ëŠ” í•¨ìˆ˜
 				if (onoff == 0) {
 					$("#cat").show("slow");
-					$(this).html("ÀÌ¹ÌÁö¼û±è");
+					$(this).html("ì´ë¯¸ì§€ìˆ¨ê¹€");
 					onoff = 1;
 				} else {
 					$("#cat").hide("slow");
-					$(this).html("ÀÌ¹ÌÁö¼û±è");
+					$(this).html("ì´ë¯¸ì§€ìˆ¨ê¹€");
 					onoff = 0;
 				}
 			});
