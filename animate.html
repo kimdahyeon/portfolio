@@ -11,19 +11,19 @@
 	<img id="cat" src="https://bit.ly/2OurjT2" alt="cat" width="360"
 		height="300" style="display: none" />
 	<script>
-	$(document).ready(function () {
-        var fade = 1;
-        $("button").click(function () {
-           if(fade==1){
-             $("#dog").fadeIn('slow');
-             fade = 0;
-           }else{
-             $("#dog").fadeOut('fast');
-             fade = 1;
-           }
-        //$('#cat').fadeToggle('slow');
-        });
-     });
+		$(document).ready(function() {
+			var fade = 1;
+			$("button").click(function() {
+				if (fade == 1) {
+					$("#dog").fadeIn('slow');
+					fade = 0;
+				} else {
+					$("#dog").fadeOut('fast');
+					fade = 1;
+				}
+				//$('#cat').fadeToggle('slow');
+			});
+		});
 	</script>
 </body>
 </html>
