@@ -1,1 +1,20 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <button>Show it</button>
+    <img id="cat" src="http://cafefiles.naver.net/20141205_15/astpo12_1417753278933Aqjh8_JPEG/hqdefaultdasd.jpg"
+        alt="cat" width="120" height="100" style="display: none" />
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#cat").show("slow");
+
+            });
+        });
+    </script>
+</body>
+</html>
