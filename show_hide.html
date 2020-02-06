@@ -9,21 +9,22 @@
 	<img id="cat" src="https://bit.ly/2OurjT2" alt="cat" width="360"
 		height="300" style="display: none" />
 	<script>
-        $(document).ready(function () {
-            var onoff=0;
-            $("button").click(function () {
-				if(btn==0){
-                $("#cat").toggle("slow");
-	            $(this).html("이미지숨김");
-	            onoff=1;
-			}
-			else{
-                $("#cat").toggle("slow");
-                $(this).html("이미지숨김");
-	            onoff=0;
-        	}
-        });
-        });
-    </script>
+		$(document).ready(function() {
+			var onoff = 0;
+			$("button").click(function() {
+				
+				//$(#cat).toggle("show"); //show()와 hide()를 교차하여 실행해주는 함수
+				if (onoff == 0) {
+					$("#cat").show("slow");
+					$(this).html("이미지숨김");
+					onoff = 1;
+				} else {
+					$("#cat").hide("slow");
+					$(this).html("이미지숨김");
+					onoff = 0;
+				}
+			});
+		});
+	</script>
 </body>
 </html>
