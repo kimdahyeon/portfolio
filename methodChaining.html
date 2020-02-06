@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<meta charset="UTF-8"
+<html>
+<head>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<button>Show it</button>
+	<img id="cat" src="//bit.ly/2OurjT2" alt="cat" width="360"
+		height="300" style="display: none" />
+	<script>
+		$(document).ready(function() {
+			var onoff = 0;
+			$("button").click(function() {
+				/*메소드 체이닝 : 함수와 함수를 체인처럼 연결하여 실행*/
+				$("#cat").show.fadeOut("slow").slideDown("slow")
+				//$("#cat").animate({left:"100px"},1000); //애니메이트 함수
+				$("#cat").attr("src"); //cat 아이디를 갖는 요소에서 attr에 설정한 속성값을 리턴
+				//리턴값은 '//bit.ly/2OurjT2'
+			});//end click
+		});//end ready
+	</script>
+</body>
+</html>
