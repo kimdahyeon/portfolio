@@ -10,7 +10,9 @@
         $(document).ready(function () {
             $("button").click(function () {
                 $("#cat").show("slow");
-                $("#cat").hide("slow");
+                $("button").click(function () {
+                	$("#cat").hide("slow");
+                }
             });
         });
     </script>
