@@ -1,29 +1,32 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
 <html>
 <head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
-  $(document).ready(function() {
-    $("textarea").keyup(function() {
-      var inputLength = $(this).val().length;
-      var remain = 150 - inputLength;
-      $("h1").html(remain);
-       if(remain >= 0) {
-         $("h1").css("color", "black");
-       } else {
-         $("h1").css("color", "red");
-       }
-    });
-  });
+   $(document).ready(function)(){
+      $('#all_check').change(function(){
+         if(this.checked){
+            $('#check_item').children().attr('checked',true);
+         } else{
+            $('#check_item').children().attr('checked',false);
+         }
+         });
+      });
 </script>
 </head>
 <body>
-  <div>
-    <p>글 작성</p>
-    <h1>150</h1>
-    <textarea cols="70" rows="5"></textarea>
-  </div>
+   <input type="checkbox" id="all_check"/>
+   <label>All</label>
+   
+   <div id="check_item">
+      <input type="checkbox"/>
+      <label>A Option</label>
+      <input type="checkbox"/>
+      <label>B Option</label>
+      <input type="checkbox"/>
+      <label>C Option</label>
+      </div>
 </body>
-
 </html>
