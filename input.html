@@ -1,28 +1,25 @@
 <!DOCTYPE html>
+<<meta charset="UTF-8">>
 <html>
 <head>
-<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</script>
 <script>
   $(document).ready(function() {
     $("textarea").keyup(function() {
       var inputLength = $(this).val().length;
       var remain = 150 - inputLength;
+
       $("h1").html(remain);
-       if(remain >= 0) {
-         $("h1").css("color", "black");
-       } else {
-         $("h1").css("color", "red");
-       }
     });
   });
 </script>
 </head>
 <body>
   <div>
-    <p>±Û ÀÛ¼º</p>
+    <p>ê¸€ ìž‘ì„±</p>
     <h1>150</h1>
     <textarea cols="70" rows="5"></textarea>
   </div>
 </body>
-
 </html>
