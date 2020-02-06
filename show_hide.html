@@ -15,9 +15,11 @@
 			$("button").click(function() {
 				/*메소드 체이닝 : 함수와 함수를 체인처럼 연결하여 실행*/
 				$("#cat").show.fadeOut("slow").slideDown("slow")
-				//$("#cat").animate({left},1000).slideDown("slow")
-			});
-		});
+				//$("#cat").animate({left:"100px"},1000); //애니메이트 함수
+				$("#cat").attr("src"); //cat 아이디를 갖는 요소에서 attr에 설정한 속성값을 리턴
+				//리턴값은 'https://bit.ly/2OurjT2'
+			});//end click
+		});//end ready
 	</script>
 </body>
 </html>
