@@ -1,32 +1,29 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 <script>
-   $(document).ready(function)(){
-      $('#all_check').change(function(){
-         if(this.checked){
-            $('#check_item').children().attr('checked',true);
-         } else{
-            $('#check_item').children().attr('checked',false);
-         }
-         });
-      });
+  $(document).ready(function() {
+    $("textarea").keyup(function() {  //textarea에 키업(키에서 손뗄때)
+      var inputLength = $(this).val().length;//입력길이를 inputlength에 저장
+      var remain = 150 - inputLength;	//입력가능갯수를 구함
+      $("h1").html(remain);				//큰제목에 입력 가능갯수 출력
+       if(remain >= 0) {				//입력가능범위
+         $("h1").css("color", "black");
+       } else {
+         $("h1").css("color", "red");
+       }
+    });
+  });
 </script>
 </head>
 <body>
-   <input type="checkbox" id="all_check"/>
-   <label>All</label>
-   
-   <div id="check_item">
-      <input type="checkbox"/>
-      <label>A Option</label>
-      <input type="checkbox"/>
-      <label>B Option</label>
-      <input type="checkbox"/>
-      <label>C Option</label>
-      </div>
+  <div>
+    <p>글 작성</p>
+    <h1>150</h1>
+    <textarea cols="70" rows="5"></textarea>
+  </div>
 </body>
+
 </html>
