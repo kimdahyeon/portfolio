@@ -13,18 +13,16 @@
             var onoff=0;
             $("button").click(function () {
 				if(btn==0){
-                $("#cat").show("slow");
+                $("#cat").toggle("slow");
 	            $(this).html("ÀÌ¹ÌÁö¼û±è");
 	            onoff=1;
-	            });
 			}
 			else{
-			$("button").click(function () {
-                $("#cat").hide("slow");
+                $("#cat").toggle("slow");
                 $(this).html("ÀÌ¹ÌÁö¼û±è");
 	            onoff=0;
-            });
         	}
+        });
         });
     </script>
 </body>
