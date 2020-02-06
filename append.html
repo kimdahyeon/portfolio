@@ -1,22 +1,22 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script>
-   $(document).ready(function() {
-      $("#button1").click(function() {
-         $("p").append("<b style=color:'red'>Hello! </b>.");
-      });
-      $("#button2").click(function() {
-         $("p").prepend("<b style=color:'red'>Hello! </b>.");
-      });
-   });
-</script>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+ 
 </head>
 <body>
-   <p>I would like to say:</p>
-   <button id="button1">append()</button>
-   <button id="button2">prepend()</button>
+    <p>I would like to say: </p>
+    <button id="button1">append()</button>
+    <button id="button2">prepend()</button>
 </body>
+   <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("p").append("<b style='color:red'>Hello! </b>.");
+            });
+            $("#button2").click(function () {
+                $("p").prepend("<b style='color:red'>Hello! </b>.");
+            });
+        });
+    </script>
 </html>
