@@ -5,43 +5,43 @@
 <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
 <style>
 p {
-   background-color: yellow;
+	background-color: yellow;
 }
 
 .container {
-   height: 80px;
-   width: 200px;
-   border: 1px dotted red;
+	height: 80px;
+	width: 200px;
+	border: 1px dotted red;
 }
 </style>
 <script>
-      $(document).ready(function() {
-         $("#button1").click(function() {
-            $(".container").remove();
-            //container도 사라짐
-            //삭제하고 다른 요소로 변경하고 싶을때 사용
-         });
-      });
-      $(document).ready(function() {
-         $("#button2").click(function() {
-            $(".container").empty();
-            //container는 있고 안의 내용은 사라짐
-            //값의 교체나 변화를 위해 사용
-         });
-      });
-      </script>
+	$(document).ready(function() {
+		$("#button1").click(function() {
+			$(".container").remove();
+			//container도 사라짐
+			//삭제하고 다른 요소로 변경하고 싶을때 사용
+		});
+	});
+	$(document).ready(function() {
+		$("#button2").click(function() {
+			$(".container").empty();
+			//container는 있고 안의 내용은 사라짐
+			//값의 교체나 변화를 위해 사용
+		});
+	});
+</script>
 </head>
 <body>
-   <button id="button1">
-      <b style='color: red'>remove()</b>
-   </button>
-   <button id="button2">
-      <b style='color: blue'>empty()</b>
-   </button>
-   <div class="container">
-      <p class="hello">Hello</p>
-      <p class="goodbye">Goodbye</p>
-   </div>
+	<button id="button1">
+		<b style='color: red'>remove()</b>
+	</button>
+	<button id="button2">
+		<b style='color: blue'>empty()</b>
+	</button>
+	<div class="container">
+		<p class="hello">Hello</p>
+		<p class="goodbye">Goodbye</p>
+	</div>
 </body>
 <br>
 </html>
