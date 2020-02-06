@@ -11,18 +11,18 @@
 	<script>
         $(document).ready(function () {
             boolean btn=false;
-            if(btn==false){
-            	$("button").click(function () {
-                	$("#cat").show("slow");
-                	btn=true
-                }
-            }else{
-            	$("button").click(function () {
-                	$("#cat").hide("slow");
-               		btn=false
-            	}
-                }
+			if(btn==false){
+            $("button").click(function () {
+                $("#cat").show("slow");
+	            btn=true;
+	            });
+			}
+			else{
+			$("button").click(function () {
+                $("#cat").hide("slow");
+                btn=false;
             });
+        	}
         });
     </script>
 </body>
